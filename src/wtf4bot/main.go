@@ -1,4 +1,4 @@
-package src
+package wtf4bot
 
 import (
 	"github.com/go-telegram-bot-api/telegram-bot-api"
