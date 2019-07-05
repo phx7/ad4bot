@@ -1,1 +1,1 @@
-web: src/wtf4bot/main
+web: src/ad4bot/main
