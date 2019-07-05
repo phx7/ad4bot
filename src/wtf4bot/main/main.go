@@ -32,7 +32,7 @@ func main() {
 		}
 
 		// delete stickers
-		if update.Message.Sticker != nil {
+		if (update.Message.Chat.IsGroup() || update.Message.Chat.IsSuperGroup()) && update.Message.Sticker != nil {
 			log.Printf("Deleted sticker from @%s (%s %s)", update.Message.From.UserName, update.Message.From.FirstName, update.Message.From.LastName)
 			bot.DeleteMessage(tgbotapi.DeleteMessageConfig{update.Message.Chat.ID, update.Message.MessageID})
 		}
